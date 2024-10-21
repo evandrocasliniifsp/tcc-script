@@ -1,7 +1,7 @@
 import { round } from "./number.helper";
 
-export const getStringSizeInKBytes = (str: string) => {
+export const getStringSizeInMBytes = (str: string) => {
   return round(
-    (new TextEncoder().encode(str).length) / 1024
+    ((new TextEncoder().encode(str).length) / 1024) / 1024
   );
 };

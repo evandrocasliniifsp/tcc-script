@@ -1,4 +1,4 @@
-export const MAX_REQUEST_NUMBER = 25;
+export const MAX_REQUEST_NUMBER = 40;
 
 // complete queries
 export const findLaureateQuery = {
