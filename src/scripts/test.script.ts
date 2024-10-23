@@ -88,7 +88,7 @@ export const makeGraphqlMetrics = async (
 
     const individualEndTime = performance.now();
 
-    individualResponseTime.push(individualEndTime - individualStartTime);
+    individualResponseTime.push(convertMillisecondsToSeconds(individualEndTime - individualStartTime));
     individualRequestSize.push(getStringSizeInMBytes(JSON.stringify(data)));
     dataList.push(data);
   }
@@ -116,7 +116,7 @@ export const makeRestMetrics = async (url: string) => {
 
     const individualEndTime = performance.now();
 
-    individualResponseTime.push(individualEndTime - individualStartTime);
+    individualResponseTime.push(convertMillisecondsToSeconds(individualEndTime - individualStartTime));
     individualRequestSize.push(getStringSizeInMBytes(JSON.stringify(data)));
     dataList.push(data);
   }
